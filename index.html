@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Titanium Browser</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: #0d0d0d;
+        color: #e6e6e6;
+        overflow-x: hidden;
+    }
+
+    /* Floating Titanium glow orb */
+    #orb {
+        position: fixed;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, rgba(180,180,255,0.25), rgba(0,0,0,0));
+        border-radius: 50%;
+        pointer-events: none;
+        filter: blur(40px);
+        transition: transform 0.15s ease-out;
+        z-index: -1;
+    }
+
+    header {
+        text-align: center;
+        padding: 120px 20px 80px;
+    }
+
+    h1 {
+        font-size: 4rem;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        background: linear-gradient(90deg, #9bbcff, #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p.subtitle {
+        font-size: 1.3rem;
+        opacity: 0.8;
+        margin-bottom: 40px;
+    }
+
+    /* Download button */
+    .download-btn {
+        display: inline-block;
+        padding: 16px 40px;
+        font-size: 1.2rem;
+        color: #0d0d0d;
+        background: #9bbcff;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.25s ease;
+        box-shadow: 0 0 20px rgba(155,188,255,0.3);
+    }
+
+    .download-btn:hover {
+        background: #c7d8ff;
+        transform: translateY(-4px);
+        box-shadow: 0 0 35px rgba(155,188,255,0.6);
+    }
+
+    /* Feature cards */
+    .features {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 60px 20px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        background: #141414;
+        padding: 25px;
+        width: 280px;
+        border-radius: 10px;
+        border: 1px solid #1f1f1f;
+        transition: 0.25s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+        border-color: #9bbcff;
+        box-shadow: 0 0 25px rgba(155,188,255,0.2);
+    }
+
+    .card h3 {
+        margin-top: 0;
+        color: #c7d8ff;
+    }
+
+    footer {
+        text-align: center;
+        padding: 40px;
+        opacity: 0.5;
+        font-size: 0.9rem;
+    }
+</style>
+</head>
+
+<body>
+
+<div id="orb"></div>
+
+<header>
+    <h1>Titanium Browser</h1>
+    <p class="subtitle">Forged for purity. Built for speed. Designed with intent.</p>
+
+    <a class="download-btn" href="/Titanium-Browser/titanium/releases/download/v1.0.0/Titanium.exe">Download Titanium</a>
+</header>
+
+<section class="features">
+    <div class="card">
+        <h3>Minimal by Design</h3>
+        <p>No clutter. No noise. Just the web — clean, sharp, and fast.</p>
+    </div>
+
+    <div class="card">
+        <h3>Lightweight Core</h3>
+        <p>Launches instantly. Runs anywhere. Titanium stays out of your way.</p>
+    </div>
+
+    <div class="card">
+        <h3>Forged Identity</h3>
+        <p>A browser shaped by constraints, precision, and creative discipline.</p>
+    </div>
+</section>
+
+<footer>
+    Titanium Browser — Forged with intent.
+</footer>
+
+<script>
+    // Floating orb follows the mouse
+    const orb = document.getElementById("orb");
+
+    document.addEventListener("mousemove", (e) => {
+        orb.style.transform = `translate(${e.clientX - 150}px, ${e.clientY - 150}px)`;
+    });
+</script>
+
+</body>
+</html>
