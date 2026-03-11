@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /google117834e32b682861.html
+Disallow: /google117834e32b682861
